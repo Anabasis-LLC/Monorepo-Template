@@ -10,11 +10,12 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "format": "node_modules/.bin/prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
     "dev:check": ".bin/check-development-environment",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "node_modules/.bin/prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.3",

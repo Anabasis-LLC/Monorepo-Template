@@ -1,7 +1,9 @@
 {
   "name": "tsconfig",
   "private": true,
-  "publishConfig": {
-    "access": "public"
-  }
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ]
 }

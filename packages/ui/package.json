@@ -5,6 +5,7 @@
   "types": "./index.tsx",
   "scripts": {
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\"",
+    "check-types": "../../node_modules/.bin/tsc --noEmit",
     "generate:component": "../../node_modules/.bin/turbo gen react-component"
   },
   "devDependencies": {

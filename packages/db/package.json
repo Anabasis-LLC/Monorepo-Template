@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\"",
+    "check-types": "../../node_modules/.bin/tsc --noEmit",
     "db:generate": "drizzle-kit generate:pg",
     "db:migrate": "ts-node scripts/migrate"
   },

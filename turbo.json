@@ -3,14 +3,15 @@
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": ["NODE_ENV", "DATABASE_URL"],
   "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
     "lint": {},
+    "check-types": {},
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
     }
   }
 }
