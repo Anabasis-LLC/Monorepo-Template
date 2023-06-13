@@ -1,0 +1,25 @@
+{
+  "name": "db",
+  "private": true,
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint \"**/*.ts*\"",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "ts-node scripts/migrate"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.26.5",
+    "drizzle-zod": "^0.4.3",
+    "pg": "^8.11.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/pg": "^8",
+    "drizzle-kit": "^0.18.1",
+    "eslint-config-custom": "workspace:^",
+    "postgres": "^3.3.5",
+    "prettier-config": "workspace:^",
+    "ts-node": "^10.9.1",
+    "tsconfig": "workspace:^"
+  },
+  "prettier": "prettier-config"
+}

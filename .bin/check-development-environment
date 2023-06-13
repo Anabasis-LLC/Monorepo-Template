@@ -1,0 +1,74 @@
+#!/bin/sh
+
+# direnv
+
+echo -n "Checking direnv... "
+
+if command -v direnv >/dev/null 2>&1; then
+    echo "[✓]"
+else
+    echo "[x]"
+    echo "Is direnv installed and hooked into your shell? (https://direnv.net/#basic-installation)"
+    exit 1
+fi
+
+# postgres
+
+echo -n "Checking psql... "
+
+if command -v psql >/dev/null 2>&1; then
+    echo "[✓]"
+else
+    echo "[x]"
+    echo "Is PostgreSQL installed?"
+    exit 1
+fi
+
+echo -n "Checking DATABASE_URL... "
+
+if [ ! -z "$DATABASE_URL" ]; then
+    echo "[✓]"
+else
+    echo "[x]"
+    echo "Is .envrc loaded? (direnv allow)"
+    exit 1
+fi
+
+echo -n "Checking database host... "
+
+DATABASE_HOST=$(echo $DATABASE_URL | sed 's/\/development//g')
+
+if psql $DATABASE_HOST -t -l >/dev/null 2>&1; then
+    echo "[✓]"
+else
+    echo "[x]"
+    echo "Did you install and start your PostgreSQL server?"
+    # OS X:
+    # brew install postgresql@14
+    # brew services start postgresql@14
+    # psql postgresql://localhost:5432/postgres -c "CREATE USER postgres WITH SUPERUSER PASSWORD 'password'"
+    # psql postgresql://postgres:password@localhost:5432 -c "CREATE DATABASE development"
+    #
+    # Ubuntu:
+    # sudo apt-get install -y postgresql-14
+    # sudo service postgresql start
+    # sudo -u postgres psql -c "ALTER USER postgres WITH ENCRYPTED PASSWORD 'password'"
+    # psql postgresql://postgres:password@localhost:5432 -c "CREATE DATABASE development"
+    exit 1
+fi
+
+echo -n "Checking database tables... "
+
+TABLES=$(psql $DATABASE_URL -t -c "SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname = 'public'" 2>/dev/null)
+
+if echo $TABLES | grep -q users; then
+    echo "[✓]"
+else
+    echo "[x]"
+    echo "Is your database migrated? (yarn db:migrate)"
+    exit 1
+fi
+
+#
+
+exit 0
