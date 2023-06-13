@@ -1,11 +1,5 @@
 # Anabasis Labs / Monorepo Template
 
-- [Node 18](https://nodejs.org/en)
-- [Turborepo](https://turbo.build/repo/docs)
-- [Yarn 3](https://yarnpkg.com/getting-started/usage)
-- [Next.js 13](https://nextjs.org/docs)
-- [Drizzle ORM](https://orm.drizzle.team/docs/quick-start)
-
 ### Contents
 
 - [Prepare Development Environment](README.md#prepare-development-environment)
@@ -14,6 +8,7 @@
   - [Environment Variables](README.md#environment-variables)
   - [Install Dependencies](README.md#install-dependencies)
   - [Migrate Database](README.md#migrate-database)
+  - [Verify Development Environment](README.md#verify-development-environment)
 - [Run Locally](README.md#run-locally)
 
 ### Prepare Development Environment
@@ -97,6 +92,14 @@ Create and migrate your database:
 
 ```sh
 yarn db:migrate
+```
+
+#### Verify Development Environment
+
+All checks should pass:
+
+```sh
+yarn dev:check
 ```
 
 ### Run Locally
