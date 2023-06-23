@@ -8,17 +8,22 @@
     "build": "next build"
   },
   "dependencies": {
-    "next": "^13.4.5",
+    "@hookform/resolvers": "^3.1.1",
+    "framer-motion": "^10.12.17",
+    "hooks": "workspace:^",
+    "next": "^13.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:^"
+    "ui": "workspace:^",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
-    "@types/react": "^18.2.12",
-    "@types/react-dom": "^18.2.5",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
     "eslint-config-custom": "workspace:^",
     "prettier-config": "workspace:^",
     "tsconfig": "workspace:^"
-  }
+  },
+  "prettier": "prettier-config"
 }

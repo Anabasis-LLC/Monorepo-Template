@@ -1,5 +1,5 @@
 {
-  "name": "yummybytes",
+  "name": "monorepo-template",
   "private": true,
   "packageManager": "yarn@3.6.0",
   "engines": {
@@ -18,9 +18,21 @@
     "build": "turbo run build"
   },
   "devDependencies": {
-    "@turbo/gen": "^1.10.3",
+    "@turbo/gen": "^1.10.6",
     "eslint-config-custom": "workspace:^",
-    "turbo": "^1.10.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "turbo": "^1.10.6",
     "typescript": "^5.1.3"
+  },
+  "lint-staged": {
+    "apps/web/**/*.{tsx,ts}": [
+      "node_modules/.bin/prettier --write --config packages/prettier-config/index.js",
+      "node_modules/.bin/eslint -c .eslintrc.js --max-warnings=0"
+    ],
+    "packages/{db,hooks,ui}/**/*.ts": [
+      "node_modules/.bin/prettier --write --config packages/prettier-config/index.js",
+      "node_modules/.bin/eslint -c .eslintrc.js --max-warnings=0"
+    ]
   }
 }

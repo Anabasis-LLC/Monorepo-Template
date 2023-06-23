@@ -1,10 +1,15 @@
-import { Button, Header } from "ui";
+// lib
+import { Shell } from '../components/shell';
+import { Home } from '../components/pages/home';
+
+/**
+ * Page
+ */
 
 export default function Page() {
   return (
-    <>
-      <Header text="Web" />
-      <Button />
-    </>
+    <Shell container={false}>
+      <Home />
+    </Shell>
   );
 }

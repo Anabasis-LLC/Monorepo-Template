@@ -2,7 +2,7 @@
 import { z } from 'zod';
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 
-// local
+// lib
 import { users } from '../schema';
 
 /**
