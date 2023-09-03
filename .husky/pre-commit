@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Don't do anything if yarn isn't installed.
+command -v yarn >/dev/null 2>&1 || exit 0
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn lint-staged && yarn check-types
