@@ -1,0 +1,6 @@
+# Use `gpg --gen-random --armor 1 18` to generate *_SECRET values.
+export NEXTAUTH_SECRET=
+
+# Retrieve from `https://discord.com/developers/applications/[...]/oauth2/general`.
+export DISCORD_CLIENT_ID=
+export DISCORD_CLIENT_SECRET=
