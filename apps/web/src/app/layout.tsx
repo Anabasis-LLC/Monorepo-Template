@@ -2,7 +2,7 @@
 import { Inter, Poppins, JetBrains_Mono } from 'next/font/google';
 
 // css
-import 'ui/globals.css';
+import '@anabasis/ui/globals.css';
 
 /**
  * Fonts

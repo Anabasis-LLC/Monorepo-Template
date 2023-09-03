@@ -29,12 +29,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@anabasis/db@workspace:packages/db":
+"@anabasis/db@workspace:^, @anabasis/db@workspace:packages/db":
   version: 0.0.0-use.local
   resolution: "@anabasis/db@workspace:packages/db"
   dependencies:
     "@anabasis/prettier-config": "workspace:^"
     "@anabasis/tsconfig": "workspace:^"
+    "@types/node": ^20.5.7
     "@types/pg": ^8.10.2
     drizzle-kit: ^0.19.13
     drizzle-orm: ^0.28.5
@@ -43,6 +44,7 @@ __metadata:
     pg: ^8.11.3
     postgres: ^3.3.5
     ts-node: ^10.9.1
+    typescript: ^5.2.2
     zod: ^3.22.2
   languageName: unknown
   linkType: soft
@@ -51,11 +53,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anabasis/hooks@workspace:packages/hooks"
   dependencies:
+    "@anabasis/db": "workspace:^"
     "@anabasis/prettier-config": "workspace:^"
     "@types/react": ^18.2.21
     "@types/react-dom": ^18.2.7
     eslint-config-anabasis: "workspace:^"
     react: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
+"@anabasis/lib@workspace:packages/lib":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/lib@workspace:packages/lib"
+  dependencies:
+    "@anabasis/prettier-config": "workspace:^"
+    "@panva/hkdf": ^1.1.1
+    "@types/uuid": ^9.0.3
+    eslint-config-anabasis: "workspace:^"
+    jose: ^4.14.4
+    uuid: ^9.0.0
   languageName: unknown
   linkType: soft
 
@@ -1153,6 +1169,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@panva/hkdf@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@panva/hkdf@npm:1.1.1"
+  checksum: f0dd12903751d8792420353f809ed3c7de860cf506399759fff5f59f7acfef8a77e2b64012898cee7e5b047708fa0bd91dff5ef55a502bf8ea11aad9842160da
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -1884,7 +1907,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.5.9":
+"@types/node@npm:^20.5.7, @types/node@npm:^20.5.9":
   version: 20.5.9
   resolution: "@types/node@npm:20.5.9"
   checksum: 717490e94131722144878b4ca1a963ede1673bb8f2ef78c2f5b50b918df6dc9b35e7f8283e5c2a7a9f137730f7c08dc6228e53d4494a94c9ee16881e6ce6caed
@@ -1944,6 +1967,13 @@ __metadata:
   version: 0.16.3
   resolution: "@types/scheduler@npm:0.16.3"
   checksum: 2b0aec39c24268e3ce938c5db2f2e77f5c3dd280e05c262d9c2fe7d890929e4632a6b8e94334017b66b45e4f92a5aa42ba3356640c2a1175fa37bef2f5200767
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^9.0.3":
+  version: 9.0.3
+  resolution: "@types/uuid@npm:9.0.3"
+  checksum: 3dde198defd71c067dd14b3050a8fe6d1ead5fe94ec318472e2c30a399d13f18941fe66cffabdcac7267177c9de2f975fdee6f0cc87cde610a2578e1ce4cc3af
   languageName: node
   linkType: hard
 
@@ -5176,6 +5206,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jose@npm:^4.14.4":
+  version: 4.14.5
+  resolution: "jose@npm:4.14.5"
+  checksum: 6fd42cd8c56efe28326549b05fc385f484b93424738a430c0ff776e80846b35a6e1af9648a5c1958eaefa8636b989e71cb6687155f1751721c0a9d17fc281a6f
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -7895,6 +7932,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "uuid@npm:9.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
+  languageName: node
+  linkType: hard
+
 "v8-compile-cache-lib@npm:^3.0.1":
   version: 3.0.1
   resolution: "v8-compile-cache-lib@npm:3.0.1"
@@ -7945,6 +7991,7 @@ __metadata:
     next: ^13.4.19
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-hook-form: ^7.46.0
     zod: ^3.22.2
   languageName: unknown
   linkType: soft

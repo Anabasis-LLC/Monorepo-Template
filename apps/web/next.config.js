@@ -1,4 +1,14 @@
 module.exports = {
-  reactStrictMode: true,
-  transpilePackages: ['ui', 'hooks'],
+  experimental: {
+    typedRoutes: true,
+  },
+  reactStrictMode: false,
+  swcMinify: true,
+  output: 'standalone',
+  transpilePackages: [
+    '@anabasis/lib',
+    '@anabasis/db',
+    '@anabasis/hooks',
+    '@anabasis/ui',
+  ],
 };

@@ -1,21 +1,22 @@
 {
-  "name": "@anabasis/hooks",
+  "name": "@anabasis/lib",
   "private": true,
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.esm.js",
   "scripts": {
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\" --max-warnings=0",
     "check-types": "../../node_modules/.bin/tsc --noEmit"
   },
   "dependencies": {
-    "@anabasis/db": "workspace:^"
+    "@panva/hkdf": "^1.1.1",
+    "jose": "^4.14.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@anabasis/prettier-config": "workspace:^",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "eslint-config-anabasis": "workspace:^",
-    "react": "^18.2.0"
+    "@types/uuid": "^9.0.3",
+    "eslint-config-anabasis": "workspace:^"
   },
   "prettier": "@anabasis/prettier-config"
 }

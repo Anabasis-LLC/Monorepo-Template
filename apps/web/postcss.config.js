@@ -1,1 +1,1 @@
-module.exports = require('ui/postcss.config');
+module.exports = require('@anabasis/ui/postcss.config');

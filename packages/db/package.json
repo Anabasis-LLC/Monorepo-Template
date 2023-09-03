@@ -1,11 +1,14 @@
 {
   "name": "@anabasis/db",
   "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.esm.js",
   "scripts": {
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\" --max-warnings=0",
     "check-types": "../../node_modules/.bin/tsc --noEmit",
     "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "ts-node scripts/migrate"
+    "db:migrate": "ts-node-esm scripts/migrate.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.28.5",
@@ -16,11 +19,13 @@
   "devDependencies": {
     "@anabasis/prettier-config": "workspace:^",
     "@anabasis/tsconfig": "workspace:^",
+    "@types/node": "^20.5.7",
     "@types/pg": "^8.10.2",
     "drizzle-kit": "^0.19.13",
     "eslint-config-anabasis": "workspace:^",
     "postgres": "^3.3.5",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   },
   "prettier": "@anabasis/prettier-config"
 }

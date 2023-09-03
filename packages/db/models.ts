@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 
 // lib
-import { users } from '../schema';
+import { users } from './schema';
 
 /**
  * CreateUser

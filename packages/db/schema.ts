@@ -1,5 +1,5 @@
 // 3rd party
-import { sql } from 'drizzle-orm';
+import { sql, relations } from 'drizzle-orm';
 import {
   pgTable,
   serial,
@@ -51,6 +51,10 @@ export const users = pgTable(
   },
 );
 
+export const usersRelations = relations(users, ({ many }) => ({
+  oauthConnections: many(oauthConnections),
+}));
+
 /**
  * oauthConnections
  */
@@ -62,7 +66,7 @@ export const oauthConnections = pgTable(
     uuid: uuid('uuid')
       .default(sql`gen_random_uuid()`)
       .notNull(),
-    userId: integer('userId')
+    userId: integer('user_id')
       .notNull()
       .references(() => users.id, {
         onDelete: 'restrict',
@@ -91,6 +95,16 @@ export const oauthConnections = pgTable(
       uuidKey: uniqueIndex('oauth_connections_uuid_key').on(table.uuid),
     };
   },
+);
+
+export const oauthConnectionsRelations = relations(
+  oauthConnections,
+  ({ one }) => ({
+    user: one(users, {
+      fields: [oauthConnections.userId],
+      references: [users.id],
+    }),
+  }),
 );
 
 /**
