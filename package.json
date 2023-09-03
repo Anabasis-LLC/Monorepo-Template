@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-template",
+  "name": "@anabasis/monorepo-template",
   "private": true,
   "packageManager": "yarn@3.6.0",
   "engines": {
@@ -18,7 +18,7 @@
     "build": "turbo run build"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:^",
+    "eslint-config-anabasis": "workspace:^",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "turbo": "^1.10.13",

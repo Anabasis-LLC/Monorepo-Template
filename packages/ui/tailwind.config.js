@@ -4,9 +4,10 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   darkMode: ['class'],
   content: [
-    './app/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    '../../packages/ui/components/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx}',
+    './src/components/**/*.{ts,tsx}',
+    '../../packages/ui/src/components/**/*.{ts,tsx}',
+    '../../../packages/ui/src/components/**/*.{ts,tsx}',
   ],
   theme: {
     container: {
@@ -26,6 +27,7 @@ module.exports = {
         foreground: 'rgb(var(--foreground))',
         selection: 'rgb(var(--selection))',
         comment: 'rgb(var(--comment))',
+
         cyan: 'rgb(var(--cyan))',
         green: 'rgb(var(--green))',
         orange: 'rgb(var(--orange))',
@@ -34,34 +36,7 @@ module.exports = {
         red: 'rgb(var(--red))',
         yellow: 'rgb(var(--yellow))',
 
-        primary: {
-          DEFAULT: 'rgb(var(--primary))',
-          foreground: 'rgb(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'rgb(var(--secondary))',
-          foreground: 'rgb(var(--secondary-foreground))',
-        },
-        accent: {
-          DEFAULT: 'rgb(var(--accent))',
-          foreground: 'rgb(var(--accent-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'rgb(var(--destructive))',
-          foreground: 'rgb(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'rgb(var(--muted))',
-          foreground: 'rgb(var(--muted-foreground))',
-        },
-        card: {
-          DEFAULT: 'rgb(var(--card))',
-          foreground: 'rgb(var(--card-foreground))',
-        },
-        popover: {
-          DEFAULT: 'rgb(var(--popover))',
-          foreground: 'rgb(var(--popover-foreground))',
-        },
+        muted: 'rgb(var(--muted))',
       },
       borderRadius: {
         lg: `var(--radius)`,

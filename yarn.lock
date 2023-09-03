@@ -29,6 +29,92 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anabasis/db@workspace:packages/db":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/db@workspace:packages/db"
+  dependencies:
+    "@anabasis/prettier-config": "workspace:^"
+    "@anabasis/tsconfig": "workspace:^"
+    "@types/pg": ^8.10.2
+    drizzle-kit: ^0.19.13
+    drizzle-orm: ^0.28.5
+    drizzle-zod: ^0.5.1
+    eslint-config-anabasis: "workspace:^"
+    pg: ^8.11.3
+    postgres: ^3.3.5
+    ts-node: ^10.9.1
+    zod: ^3.22.2
+  languageName: unknown
+  linkType: soft
+
+"@anabasis/hooks@workspace:^, @anabasis/hooks@workspace:packages/hooks":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/hooks@workspace:packages/hooks"
+  dependencies:
+    "@anabasis/prettier-config": "workspace:^"
+    "@types/react": ^18.2.21
+    "@types/react-dom": ^18.2.7
+    eslint-config-anabasis: "workspace:^"
+    react: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
+"@anabasis/monorepo-template@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/monorepo-template@workspace:."
+  dependencies:
+    eslint-config-anabasis: "workspace:^"
+    husky: ^8.0.3
+    lint-staged: ^14.0.1
+    turbo: ^1.10.13
+    typescript: ^5.2.2
+  languageName: unknown
+  linkType: soft
+
+"@anabasis/prettier-config@workspace:^, @anabasis/prettier-config@workspace:packages/prettier-config":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/prettier-config@workspace:packages/prettier-config"
+  dependencies:
+    prettier: ^3.0.3
+  languageName: unknown
+  linkType: soft
+
+"@anabasis/tsconfig@workspace:^, @anabasis/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/tsconfig@workspace:packages/tsconfig"
+  languageName: unknown
+  linkType: soft
+
+"@anabasis/ui@workspace:^, @anabasis/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@anabasis/ui@workspace:packages/ui"
+  dependencies:
+    "@anabasis/prettier-config": "workspace:^"
+    "@radix-ui/react-alert-dialog": ^1.0.4
+    "@radix-ui/react-avatar": ^1.0.3
+    "@radix-ui/react-label": ^2.0.2
+    "@radix-ui/react-progress": ^1.0.3
+    "@radix-ui/react-select": ^1.2.2
+    "@radix-ui/react-separator": ^1.0.3
+    "@radix-ui/react-slot": ^1.0.2
+    "@types/react": ^18.2.21
+    "@types/react-dom": ^18.2.7
+    autoprefixer: ^10.4.15
+    class-variance-authority: ^0.7.0
+    clsx: ^2.0.0
+    eslint-config-anabasis: "workspace:^"
+    lucide-react: ^0.274.0
+    postcss: ^8.4.29
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-hook-form: ^7.46.0
+    shadcn-ui: ^0.3.0
+    tailwind-merge: ^1.14.0
+    tailwindcss: ^3.3.3
+    tailwindcss-animate: ^1.0.7
+  languageName: unknown
+  linkType: soft
+
 "@antfu/ni@npm:^0.21.4":
   version: 0.21.8
   resolution: "@antfu/ni@npm:0.21.8"
@@ -1151,6 +1237,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-avatar@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@radix-ui/react-avatar@npm:1.0.3"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-context": 1.0.1
+    "@radix-ui/react-primitive": 1.0.3
+    "@radix-ui/react-use-callback-ref": 1.0.1
+    "@radix-ui/react-use-layout-effect": 1.0.1
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: defd6070ca89d64f46017943bc444ac73ca4711f710b8fcb7152f5fb84cb05f39e7944d372695720929fa666cf9bc65ce95725c5a29d81f9e51aba59aed42ca2
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-collection@npm:1.0.3":
   version: 1.0.3
   resolution: "@radix-ui/react-collection@npm:1.0.3"
@@ -1436,6 +1545,27 @@ __metadata:
     "@types/react-dom":
       optional: true
   checksum: 9402bc22923c8e5c479051974a721c301535c36521c0237b83e5fa213d013174e77f3ad7905e6d60ef07e14f88ec7f4ea69891dc7a2b39047f8d3640e8f8d713
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-progress@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@radix-ui/react-progress@npm:1.0.3"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-context": 1.0.1
+    "@radix-ui/react-primitive": 1.0.3
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: a4398812315ae5b25f8637a6553daf85bd36e6e08d15f7486248538a994a99268752e2c21e4af15277c17e861c1825fdd7292938c515c112dc2cdce63ec1a892
   languageName: node
   linkType: hard
 
@@ -2760,24 +2890,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"db@workspace:packages/db":
-  version: 0.0.0-use.local
-  resolution: "db@workspace:packages/db"
-  dependencies:
-    "@types/pg": ^8.10.2
-    drizzle-kit: ^0.19.13
-    drizzle-orm: ^0.28.5
-    drizzle-zod: ^0.5.1
-    eslint-config-custom: "workspace:^"
-    pg: ^8.11.3
-    postgres: ^3.3.5
-    prettier-config: "workspace:^"
-    ts-node: ^10.9.1
-    tsconfig: "workspace:^"
-    zod: ^3.22.2
-  languageName: unknown
-  linkType: soft
-
 "debug@npm:4, debug@npm:4.3.4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -3509,9 +3621,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-custom@workspace:^, eslint-config-custom@workspace:packages/eslint-config-custom":
+"eslint-config-anabasis@workspace:^, eslint-config-anabasis@workspace:packages/eslint-config":
   version: 0.0.0-use.local
-  resolution: "eslint-config-custom@workspace:packages/eslint-config-custom"
+  resolution: "eslint-config-anabasis@workspace:packages/eslint-config"
   dependencies:
     "@types/eslint": ^8.44.2
     eslint: ^8.48.0
@@ -4497,18 +4609,6 @@ __metadata:
   checksum: b0f3963a799e02173f994c452921a777f2b895b710119df999736bfed7477235c2860c423d9aea18a9f3b3d065cb1114d605c208cfcb8d0ac550f97ec5d28cb0
   languageName: node
   linkType: hard
-
-"hooks@workspace:^, hooks@workspace:packages/hooks":
-  version: 0.0.0-use.local
-  resolution: "hooks@workspace:packages/hooks"
-  dependencies:
-    "@types/react": ^18.2.21
-    "@types/react-dom": ^18.2.7
-    eslint-config-custom: "workspace:^"
-    prettier-config: "workspace:^"
-    react: ^18.2.0
-  languageName: unknown
-  linkType: soft
 
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
@@ -5628,18 +5728,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"monorepo-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "monorepo-template@workspace:."
-  dependencies:
-    eslint-config-custom: "workspace:^"
-    husky: ^8.0.3
-    lint-staged: ^14.0.1
-    turbo: ^1.10.13
-    typescript: ^5.2.2
-  languageName: unknown
-  linkType: soft
-
 "ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
@@ -6461,14 +6549,6 @@ __metadata:
   checksum: cd192ec0d0a8e4c6da3bb80e4f62afe336df3f76271ac6deb0e6a36187133b6073a19e9727a1ff108cd8b9982e4768850d413baa71214dd80c7979617dca827a
   languageName: node
   linkType: hard
-
-"prettier-config@workspace:^, prettier-config@workspace:packages/prettier-config":
-  version: 0.0.0-use.local
-  resolution: "prettier-config@workspace:packages/prettier-config"
-  dependencies:
-    prettier: ^3.0.3
-  languageName: unknown
-  linkType: soft
 
 "prettier@npm:^3.0.3":
   version: 3.0.3
@@ -7508,12 +7588,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig@workspace:^, tsconfig@workspace:packages/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "tsconfig@workspace:packages/tsconfig"
-  languageName: unknown
-  linkType: soft
-
 "tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0":
   version: 2.5.3
   resolution: "tslib@npm:2.5.3"
@@ -7703,33 +7777,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ui@workspace:^, ui@workspace:packages/ui":
-  version: 0.0.0-use.local
-  resolution: "ui@workspace:packages/ui"
-  dependencies:
-    "@radix-ui/react-alert-dialog": ^1.0.4
-    "@radix-ui/react-label": ^2.0.2
-    "@radix-ui/react-select": ^1.2.2
-    "@radix-ui/react-separator": ^1.0.3
-    "@radix-ui/react-slot": ^1.0.2
-    "@types/react": ^18.2.21
-    "@types/react-dom": ^18.2.7
-    autoprefixer: ^10.4.15
-    class-variance-authority: ^0.7.0
-    clsx: ^2.0.0
-    eslint-config-custom: "workspace:^"
-    lucide-react: ^0.274.0
-    postcss: ^8.4.29
-    prettier-config: "workspace:^"
-    react: ^18.2.0
-    react-hook-form: ^7.46.0
-    shadcn-ui: ^0.3.0
-    tailwind-merge: ^1.14.0
-    tailwindcss: ^3.3.3
-    tailwindcss-animate: ^1.0.7
-  languageName: unknown
-  linkType: soft
-
 "unbox-primitive@npm:^1.0.2":
   version: 1.0.2
   resolution: "unbox-primitive@npm:1.0.2"
@@ -7885,19 +7932,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:apps/web"
   dependencies:
+    "@anabasis/hooks": "workspace:^"
+    "@anabasis/prettier-config": "workspace:^"
+    "@anabasis/tsconfig": "workspace:^"
+    "@anabasis/ui": "workspace:^"
     "@hookform/resolvers": ^3.3.1
     "@types/node": ^20.5.9
     "@types/react": ^18.2.21
     "@types/react-dom": ^18.2.7
-    eslint-config-custom: "workspace:^"
+    eslint-config-anabasis: "workspace:^"
     framer-motion: ^10.16.2
-    hooks: "workspace:^"
     next: ^13.4.19
-    prettier-config: "workspace:^"
     react: ^18.2.0
     react-dom: ^18.2.0
-    tsconfig: "workspace:^"
-    ui: "workspace:^"
     zod: ^3.22.2
   languageName: unknown
   linkType: soft

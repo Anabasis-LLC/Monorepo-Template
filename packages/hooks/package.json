@@ -1,5 +1,5 @@
 {
-  "name": "hooks",
+  "name": "@anabasis/hooks",
   "private": true,
   "main": "./index.tsx",
   "types": "./index.tsx",
@@ -8,11 +8,11 @@
     "check-types": "../../node_modules/.bin/tsc --noEmit"
   },
   "devDependencies": {
+    "@anabasis/prettier-config": "workspace:^",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "eslint-config-custom": "workspace:^",
-    "prettier-config": "workspace:^",
+    "eslint-config-anabasis": "workspace:^",
     "react": "^18.2.0"
   },
-  "prettier": "prettier-config"
+  "prettier": "@anabasis/prettier-config"
 }

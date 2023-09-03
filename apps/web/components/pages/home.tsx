@@ -6,7 +6,14 @@ import { motion, useAnimate, useInView } from 'framer-motion';
 import { Sparkle, Layers, ArrowDownSquare } from 'lucide-react';
 
 // package
-import { Button, Card, CardContent, CardHeader, CardTitle, Screen } from 'ui';
+import {
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  Screen,
+} from '@anabasis/ui';
 
 /**
  * Home
@@ -161,7 +168,7 @@ const Hero = () => (
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
           nisi ut aliquip ex ea commodo consequat.
         </h2>
-        <Button variant="secondary" size="lg">
+        <Button variant="pink" size="lg">
           Get Started
         </Button>
       </div>

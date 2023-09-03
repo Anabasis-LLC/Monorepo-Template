@@ -1,5 +1,5 @@
 // package
-import { cn } from 'ui';
+import { cn } from '@anabasis/ui';
 
 // lib
 import { Header } from './header';

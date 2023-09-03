@@ -1,5 +1,5 @@
 {
-  "name": "prettier-config",
+  "name": "@anabasis/prettier-config",
   "private": true,
   "main": "index.js",
   "publishConfig": {

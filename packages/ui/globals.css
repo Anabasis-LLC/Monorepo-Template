@@ -16,29 +16,7 @@
     --purple: 189 147 249;
     --red: 255 85 85;
     --yellow: 241 250 140;
-
-    /* https://github.com/shadcn/ui/blob/main/apps/www/styles/globals.css */
-    --primary: 189 147 249;
-    --primary-foreground: 255 255 255;
-
-    --secondary: 255 121 198;
-    --secondary-foreground: 255 255 255;
-
-    --accent: 57 60 77;
-    --accent-foreground: 248 248 242;
-
-    --destructive: 255 85 85;
-    --destructive-foreground: 248 248 242;
-
     --muted: 57 60 77;
-    --muted-foreground: 248 248 242;
-
-    --card: 43 45 58;
-    --card-foreground: 248 248 242;
-
-    --popover: 43 45 58;
-    --popover-foreground: 248 248 242;
-
     --radius: 0.5rem;
   }
 }
@@ -49,7 +27,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
   }
 }
 
@@ -89,7 +69,8 @@ input:-webkit-autofill {
 
 input:-webkit-autofill:focus {
   -webkit-text-fill-color: #f8f8f2;
-  -webkit-box-shadow: rgb(189, 147, 249) 0px 0px 0px 2px,
+  -webkit-box-shadow:
+    rgb(189, 147, 249) 0px 0px 0px 2px,
     0 0 0px 1000px #282a36 inset;
   background-color: transparent !important;
   caret-color: white;

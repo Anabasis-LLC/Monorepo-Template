@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-custom",
+  "name": "eslint-config-anabasis",
   "private": true,
   "main": "index.js",
   "publishConfig": {

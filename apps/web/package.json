@@ -8,22 +8,22 @@
     "build": "next build"
   },
   "dependencies": {
+    "@anabasis/hooks": "workspace:^",
+    "@anabasis/ui": "workspace:^",
     "@hookform/resolvers": "^3.3.1",
     "framer-motion": "^10.16.2",
-    "hooks": "workspace:^",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:^",
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@anabasis/prettier-config": "workspace:^",
+    "@anabasis/tsconfig": "workspace:^",
     "@types/node": "^20.5.9",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "eslint-config-custom": "workspace:^",
-    "prettier-config": "workspace:^",
-    "tsconfig": "workspace:^"
+    "eslint-config-anabasis": "workspace:^"
   },
-  "prettier": "prettier-config"
+  "prettier": "@anabasis/prettier-config"
 }

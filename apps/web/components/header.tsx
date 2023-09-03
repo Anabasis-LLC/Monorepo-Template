@@ -5,8 +5,8 @@ import { useEffect } from 'react';
 import { useAnimate } from 'framer-motion';
 
 // package
-import { Button, cn } from 'ui';
-import { useWindowScroll } from 'hooks';
+import { Button, cn } from '@anabasis/ui';
+import { useWindowScroll } from '@anabasis/hooks';
 
 // lib
 import { Logo } from './logo';
@@ -35,7 +35,7 @@ export const Header = () => {
         <Logo />
         <div>
           <div className="flex gap-2">
-            <Button variant="secondary">Get Started</Button>
+            <Button variant="pink">Get Started</Button>
           </div>
         </div>
       </div>

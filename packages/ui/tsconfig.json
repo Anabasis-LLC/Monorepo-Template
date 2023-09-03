@@ -1,4 +1,10 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["."]
+  "extends": "@anabasis/tsconfig/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
 }

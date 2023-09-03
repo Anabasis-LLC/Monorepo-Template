@@ -1,5 +1,5 @@
 {
-  "name": "db",
+  "name": "@anabasis/db",
   "private": true,
   "scripts": {
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\" --max-warnings=0",
@@ -14,13 +14,13 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@anabasis/prettier-config": "workspace:^",
+    "@anabasis/tsconfig": "workspace:^",
     "@types/pg": "^8.10.2",
     "drizzle-kit": "^0.19.13",
-    "eslint-config-custom": "workspace:^",
+    "eslint-config-anabasis": "workspace:^",
     "postgres": "^3.3.5",
-    "prettier-config": "workspace:^",
-    "ts-node": "^10.9.1",
-    "tsconfig": "workspace:^"
+    "ts-node": "^10.9.1"
   },
-  "prettier": "prettier-config"
+  "prettier": "@anabasis/prettier-config"
 }
