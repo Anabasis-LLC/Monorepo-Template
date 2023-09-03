@@ -9,12 +9,14 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "es2020"
   },
   "exclude": ["node_modules"]
 }

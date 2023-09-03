@@ -10,10 +10,9 @@
     "incremental": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
     "noEmit": true,
     "resolveJsonModule": true,
     "target": "es6"
   },
-  "include": ["src", "next-env.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"]
 }

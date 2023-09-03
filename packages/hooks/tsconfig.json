@@ -1,4 +1,4 @@
 {
   "extends": "@anabasis/tsconfig/react-library.json",
-  "include": ["."]
+  "include": ["**/*.ts"]
 }
