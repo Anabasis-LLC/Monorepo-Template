@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "4b9c3333-7fdb-4486-95ac-9c5c38c8183c",
+  "id": "9da35b98-07e8-401d-8ff8-4d152554710b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "images": {
@@ -87,7 +87,8 @@
         }
       },
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "oauth_connections": {
       "name": "oauth_connections",
@@ -106,8 +107,8 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "userId": {
-          "name": "userId",
+        "user_id": {
+          "name": "user_id",
           "type": "integer",
           "primaryKey": false,
           "notNull": true
@@ -186,12 +187,12 @@
         }
       },
       "foreignKeys": {
-        "oauth_connections_userId_users_id_fk": {
-          "name": "oauth_connections_userId_users_id_fk",
+        "oauth_connections_user_id_users_id_fk": {
+          "name": "oauth_connections_user_id_users_id_fk",
           "tableFrom": "oauth_connections",
           "tableTo": "users",
           "columnsFrom": [
-            "userId"
+            "user_id"
           ],
           "columnsTo": [
             "id"
@@ -200,7 +201,8 @@
           "onUpdate": "cascade"
         }
       },
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "users": {
       "name": "users",
@@ -313,7 +315,8 @@
           "onUpdate": "cascade"
         }
       },
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     }
   },
   "enums": {},

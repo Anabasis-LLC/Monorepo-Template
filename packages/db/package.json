@@ -8,7 +8,8 @@
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\" --max-warnings=0",
     "check-types": "../../node_modules/.bin/tsc --noEmit",
     "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "ts-node-esm scripts/migrate.ts"
+    "db:migrate": "ts-node-esm scripts/migrate.ts",
+    "db:test": "ts-node-esm scripts/test.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.28.5",
