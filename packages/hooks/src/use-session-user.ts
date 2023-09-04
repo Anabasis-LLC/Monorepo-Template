@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 
 // lib
-import { SessionContext } from './session-context';
+import { SessionContext } from './session-provider';
 
 /**
  * useSessionUser
