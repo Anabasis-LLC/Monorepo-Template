@@ -1,3 +1,5 @@
+'use client';
+
 // 3rd party
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimate, useInView } from 'framer-motion';

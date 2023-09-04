@@ -12,12 +12,12 @@ import {
   CardHeader,
   CardTitle,
   Screen,
+  FadingScreen,
 } from '@anabasis/ui';
 
 // local
 import { Glow } from './glow';
 import { Hero } from './hero';
-import { FadingScreen } from './fading-screen';
 
 /**
  * Home
