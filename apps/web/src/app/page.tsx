@@ -1,15 +1,22 @@
 // lib
-import { Shell } from '../components/shell';
-import { Home } from '../components/pages/home';
+import { getSessionUser } from '@/lib/server';
+import { ShellPage } from '@/app/shell-page';
+import { Home } from '@/components/pages/home';
 
 /**
  * Page
  */
 
-export default function Page() {
+export default async function Page() {
+  const sessionUser = await getSessionUser();
+
   return (
-    <Shell container={false}>
+    <ShellPage
+      sessionUser={sessionUser}
+      requireAuthentication={false}
+      container={false}
+    >
       <Home />
-    </Shell>
+    </ShellPage>
   );
 }

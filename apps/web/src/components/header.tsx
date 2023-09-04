@@ -3,15 +3,22 @@
 // 3rd party
 import { useEffect } from 'react';
 import { useAnimate } from 'framer-motion';
+import { signIn, signOut } from 'next-auth/react';
+import { LogOut } from 'lucide-react';
 
 // package
 import { Button, cn } from '@anabasis/ui';
-import { useWindowScroll } from '@anabasis/hooks';
+import { useSessionUser, useWindowScroll } from '@anabasis/hooks';
 
 // lib
 import { Logo } from './logo';
 
+/**
+ * Header
+ */
+
 export const Header = () => {
+  const user = useSessionUser();
   const [scope, animate] = useAnimate();
   const [position] = useWindowScroll();
   const isScrolled = position.y > 0;
@@ -33,11 +40,18 @@ export const Header = () => {
     >
       <div className="container flex items-center justify-between h-full">
         <Logo />
-        <div>
-          <div className="flex gap-2">
-            <Button variant="pink">Get Started</Button>
+        {user ? (
+          <div className="flex items-center gap-2">
+            <div className="font-bold">{user.name}</div>
+            <Button variant="ghost" onClick={() => signOut()}>
+              <LogOut className="text-pink" />
+            </Button>
           </div>
-        </div>
+        ) : (
+          <Button variant="pink" onClick={() => signIn('discord')}>
+            Get Started
+          </Button>
+        )}
       </div>
     </div>
   );
