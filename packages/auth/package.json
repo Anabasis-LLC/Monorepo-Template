@@ -1,22 +1,21 @@
 {
-  "name": "@anabasis/hooks",
+  "name": "@anabasis/auth",
   "private": true,
-  "main": "./index.tsx",
-  "types": "./index.tsx",
   "scripts": {
     "format": "../../node_modules/.bin/prettier --write \"**/*.{ts,tsx}\"",
     "lint": "../../node_modules/.bin/eslint \"**/*.ts*\" --max-warnings=0",
     "check-types": "../../node_modules/.bin/tsc --noEmit"
   },
-  "dependencies": {
-    "@anabasis/db": "workspace:^"
-  },
   "devDependencies": {
+    "@anabasis/db": "workspace:^",
     "@anabasis/prettier-config": "workspace:^",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "eslint-config-anabasis": "workspace:^",
-    "react": "^18.2.0"
+    "next": "^14.0.1",
+    "next-auth": "^4.24.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "prettier": "@anabasis/prettier-config"
 }

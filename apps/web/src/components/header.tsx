@@ -8,7 +8,8 @@ import { LogOut } from 'lucide-react';
 
 // package
 import { Button, cn } from '@anabasis/ui';
-import { useSessionUser, useWindowScroll } from '@anabasis/hooks';
+import { useSessionUser } from '@anabasis/auth/client';
+import { useWindowScroll } from '@anabasis/hooks';
 
 // lib
 import { Logo } from './logo';

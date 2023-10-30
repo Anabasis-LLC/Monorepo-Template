@@ -10,7 +10,7 @@ import type { User } from '@anabasis/db';
  * SessionContext
  */
 
-export type SessionUser = User;
+export type SessionUser = User & { token: string };
 
 export type SessionContextValue = {
   sessionUser?: SessionUser | undefined;

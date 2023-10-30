@@ -4,8 +4,8 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimate, useInView } from 'framer-motion';
 
-// package
-import { Screen } from '@anabasis/ui';
+// lib
+import { Screen } from './screen';
 
 /**
  * FadingScreen

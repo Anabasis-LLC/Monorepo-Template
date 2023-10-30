@@ -1,7 +1,3 @@
----
-description: Configure your local development environment on OS X.
----
-
 # 🍎 OS X
 
 ### Contents

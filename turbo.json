@@ -10,6 +10,7 @@
     "DISCORD_CLIENT_SECRET"
   ],
   "pipeline": {
+    "format": {},
     "lint": {},
     "check-types": {},
     "dev": {

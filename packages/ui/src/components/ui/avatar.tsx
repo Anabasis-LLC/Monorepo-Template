@@ -1,9 +1,15 @@
 'use client';
 
+// 3rd party
 import * as React from 'react';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 
+// lib
 import { cn } from '../../lib/utils';
+
+/**
+ * Avatar
+ */
 
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
@@ -20,6 +26,10 @@ const Avatar = React.forwardRef<
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
+/**
+ * AvatarImage
+ */
+
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
@@ -31,6 +41,10 @@ const AvatarImage = React.forwardRef<
   />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
+
+/**
+ * AvatarFallback
+ */
 
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>,

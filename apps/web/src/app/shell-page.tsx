@@ -1,8 +1,8 @@
 // package
-import { SessionUser, SessionProvider } from '@anabasis/hooks';
+import { getSessionUser } from '@anabasis/auth/server';
+import { SessionUser, SessionProvider } from '@anabasis/auth/client';
 
 // lib
-import { getSessionUser } from '@/lib/server';
 import { Shell } from '@/components';
 
 /**

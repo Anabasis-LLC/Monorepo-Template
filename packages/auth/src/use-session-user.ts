@@ -1,3 +1,5 @@
+'use client';
+
 // 3rd party
 import { useContext } from 'react';
 

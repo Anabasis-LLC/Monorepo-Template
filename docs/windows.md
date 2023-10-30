@@ -1,7 +1,3 @@
----
-description: Configure your local development environment on WSL2 + Ubuntu on Windows.
----
-
 # 🪟 Windows
 
 ### Contents

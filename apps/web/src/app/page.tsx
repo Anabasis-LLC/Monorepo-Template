@@ -1,5 +1,7 @@
+// package
+import { getSessionUser } from '@anabasis/auth/server';
+
 // lib
-import { getSessionUser } from '@/lib/server';
 import { ShellPage } from '@/app/shell-page';
 import { Home } from '@/components/pages/home';
 

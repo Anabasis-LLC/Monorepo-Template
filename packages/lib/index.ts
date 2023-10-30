@@ -1,4 +1,14 @@
-export * as jwt from './src/jwt.js';
-export * as cookies from './src/cookies.js';
+export { parseCookies } from './src/cookies.js';
 
-export type { JWT } from './src/jwt.js';
+export { type JWT, encode, decode } from './src/jwt.js';
+
+export { getRandomIntInclusive, getRandomColor } from './src/random.js';
+
+export {
+  type ExtendedSocket,
+  type SocketIOMiddleware,
+  type AuthToken,
+  authTokenSchema,
+} from './src/socket-io.js';
+
+export { sleep } from './src/sleep.js';
